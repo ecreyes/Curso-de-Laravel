@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Hola desde la página de inicio";
 });
+
+Route::get('contacto',function(){
+	return "Hola desde la página de contacto";
+});
+
+Route::get('saludo/{nombre?}',function($nombre='invitado'){
+	return "Hola $nombre";
+})->where('nombre','[a-zA-Z]+');
