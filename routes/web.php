@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return "Hola desde la página de inicio";
-});
+Route::get('/', ['as'=>'home',function () {
+    return view('home');
+}]);
 
-Route::get('contacto',function(){
-	return "Hola desde la página de contacto";
-});
+Route::get('contacto',['as'=>'contacto',function(){
+	return view('contacto');
+}]);
 
-Route::get('saludo/{nombre?}',function($nombre='invitado'){
-	return "Hola $nombre";
-})->where('nombre','[a-zA-Z]+');
+Route::get('saludo/{nombre?}',['as'=>'saludo',function($nombre='invitado'){
+	return view('saludo',compact('nombre'));
+}])->where('nombre','[a-zA-Z]+');
