@@ -14,6 +14,7 @@
 Route::get('/', ['as'=>'home','uses'=>'PagesController@home']);
 
 Route::get('contacto',['as'=>'contacto','uses'=>'PagesController@contacto']);
+Route::post('contacto',['as'=>'contacto.create','uses'=>'PagesController@create']);
 
 Route::get('saludo/{nombre?}',['as'=>'saludo','uses'=>'PagesController@saludo'])
 		->where('nombre','[a-zA-Z]+');

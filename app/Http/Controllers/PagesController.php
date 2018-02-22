@@ -21,4 +21,9 @@ class PagesController extends Controller
     	return view('saludo',compact('nombre'));
     }
 
+    public function create(Request $request)
+    {
+        return $request->all();
+    }
+
 }

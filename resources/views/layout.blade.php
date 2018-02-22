@@ -24,5 +24,6 @@
 		<a href="{{route('contacto')}}" class="{{activeMenu('contacto')}}">Contacto</a>
 	</header>
 @yield('contenido')	
+
 </body>
 </html>
