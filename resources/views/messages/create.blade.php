@@ -2,7 +2,7 @@
 
 @section('contenido')
 <h1>Contacto</h1>
-<form  method="POST" action="{{route('contacto.create')}}">
+<form  method="POST" action="{{route('mensajes.store')}}">
 	{!! csrf_field()!!}
 	<label for="nombre">
 		Nombre<br>
@@ -18,7 +18,7 @@
 	<br>
 	<label for="mensaje">
 		Mensaje<br>
-		<textarea name="mensaje" value="{{old('mensaje')}}"></textarea>
+		<textarea name="mensaje">{{old('mensaje')}}</textarea>
 		{{$errors->first('mensaje')}}	
 	</label>
 	<br>	

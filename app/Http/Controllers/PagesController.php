@@ -12,19 +12,10 @@ class PagesController extends Controller
     	return view('home');
     }
 
-    public function contacto()
-    {
-    	return view('contacto');
-    }
 
     public function saludo($nombre='Invitado')
     {
     	return view('saludo',compact('nombre'));
-    }
-
-    public function create(CreateMessageRequest $request)
-    {
-        return $request->all();
     }
 
 }
