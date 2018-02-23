@@ -21,7 +21,7 @@
 	<header>
 		<a href="{{route('home')}}" class="{{activeMenu('/')}}">Inicio</a>
 		<a href="{{route('saludo')}}" class="{{activeMenu('saludo')}}">Saludo</a>
-		<a href="{{route('contacto')}}" class="{{activeMenu('contacto')}}">Contacto</a>
+		<a href="{{route('mensajes.index')}}" class="{{activeMenu('mensajes')}}">Mensajes</a>
 	</header>
 @yield('contenido')	
 
