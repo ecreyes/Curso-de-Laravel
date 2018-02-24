@@ -2,6 +2,9 @@
 
 @section('contenido')
 <h1>Contacto</h1>
+@if(session()->has('info'))
+	<h2>{{session('info')}}</h2>
+@endif
 <form  method="POST" action="{{route('mensajes.store')}}">
 	{!! csrf_field()!!}
 	<label for="nombre">
