@@ -17,3 +17,7 @@ Route::get('saludo/{nombre?}',['as'=>'saludo','uses'=>'PagesController@saludo'])
 		->where('nombre','[a-zA-Z]+');
 
 Route::resource('mensajes','MessagesController');
+
+Route::get('login',['as'=>'login','uses'=>'Auth\LoginController@showLoginForm']);
+Route::post('login',['as'=>'login.post','uses'=>'Auth\LoginController@login']);
+Route::get('logout',['as'=>'logout','uses'=>'Auth\LoginController@logout']);

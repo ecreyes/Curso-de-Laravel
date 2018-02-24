@@ -3,7 +3,7 @@
 @section('contenido')
 <h1>Index</h1>
 
-<table>
+<table width="100%" border="1"> 
 	<thead>
 		<tr>
 			<th>id</th>
@@ -28,7 +28,7 @@
 					<a href="{{route('mensajes.edit',$dato->id)}}">
 						Editar
 					</a>
-					<form method="POST" action="{{route('mensajes.destroy',$dato->id)}}">
+					<form method="POST" action="{{route('mensajes.destroy',$dato->id)}}" style="display:inline">
 						{{csrf_field()}}
 						{!!method_field('DELETE')!!}
 						<button type="submit">Eliminar</button>
